@@ -1,19 +1,92 @@
+/* style.css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(148, 216, 243);
+    font-size: 16px;
+    min-height: 100%;
+}
+
+header {
+    margin: 50px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+    font-size: large;
+    font-weight: bold;
+    flex: 1;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.controls ul {
+    text-decoration: underline;
+}
+
 #canvas1 {
     border: 5px solid black;
+    display: flex;
     position: absolute;
+    margin-top: 60vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
+    background-color: #fff;
 }
 
-#player, #layer1, #layer2, #layer3, #layer4, #layer5, #enemy_fly, #enemy_plant, #enemy_spider, #fire, #collisionAnimation{
+#player,
+#layer1,
+#layer2,
+#layer3,
+#layer4,
+#layer5,
+#enemy_fly,
+#enemy_plant,
+#enemy_spider,
+#fire,
+#collisionAnimation {
     display: none;
+}
+
+/* Add media queries for further responsiveness */
+@media screen and (min-width: 768px) {
+    .text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* #canvas1 {
+        margin-top: 40vh;
+    } */
+}
+
+
+@media screen and (min-height: 700px) {
+    #canvas1 {
+        margin-top: 40vh;
+    }
+}
+@media screen and (min-height: 800px) {
+    #canvas1 {
+        margin-top: 20vh;
+    }
 }

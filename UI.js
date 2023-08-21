@@ -22,7 +22,7 @@ export class UI {
         if (this.game.gameOver) {
             context.textAlign = 'left';
             context.font = this.fontSize * 2 + ' px' + this.fontFamily;
-            if (this.game.score > 5) {
+            if (this.game.score > 15) {
                 context.fillText('!! VICTORY !!', this.game.width * 0.5 - 60, this.game.height * 0.5);
             } else {
                 context.fillText('!! LOOSER ☠️!!', this.game.width * 0.5 - 60, this.game.height * 0.5);
